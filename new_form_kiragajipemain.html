@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>GAJI</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body body style="background: url('images/gambar4.jpg');background-repeat:no-repeat;background-size: 100% ;">
+
+<script>
+function kira() {
+		var jum_gaji_bersih, jum_gaji_ditetapkan, imbuhan_mvp, cukai_pemain;
+	     jum_gaji_ditetapkan = parseFloat(document.form1.jum_gaji_ditetapkan.value);
+		imbuhan_mvp = parseFloat(document.form1.imbuhan_mvp.value);
+		 cukai_pemain = parseFloat(document.form1.cukai_pemain.value);
+		 
+		cukai_pemain = 0.08 * jum_gaji_ditetapkan;
+		jum_gaji_bersih = jum_gaji_ditetapkan - cukai_pemain + imbuhan_mvp;
+		 
+		 document.form1.jum_gaji_bersih.value=jum_gaji_bersih;
+		  
+    }
+		
+</script>
+
+<div style="margin-left:25%">
+
+<div class="w3-container w3-teal">
+  <h1>SILA MASUKKAN DATA UNTUK</h1>
+</div>
+
+<div class="w3-container">
+
+<h1>KIRAAN GAJI PEMAIN</h1>
+
+</div>
+
+</div>
+
+<div class="container">
+<form action="input_process_kiragajipemain.php" method="post" enctype="multipart/form-data" name="form1">
+    
+	<div class="form-group">
+    <label for="id_pemain">ID PEMAIN:</label>
+    <input type="text" class="form-control" name="id_pemain" id="id_pemain">
+  </div>
+  
+  	<div class="form-group">
+    <label for="id_pasukan">ID PASUKAN:</label>
+    <input type="text" class="form-control" name="id_pasukan" id="id_pasukan">
+  </div>
+  
+<div class="form-group">
+    <label for="no_resit_gaji">NO RESIT GAJI:</label>
+    <input type="text" class="form-control" name="no_resit_gaji" id="no_resit_gaji">
+  </div>
+  
+ <div class="form-group">
+    <label for="jum_gaji_ditetapkan">JUM GAJI DITETAPKAN:</label>
+    <input type="text" class="form-control" name="jum_gaji_ditetapkan" id="jum_gaji_ditetapkan">
+ </div>
+ 
+  <div class="form-group">
+    <label for="cukai_pemain">CUKAI PEMAIN:</label>
+    <input type="text" class="form-control" name="cukai_pemain" id="cukai_pemain">
+ </div>
+ 
+ <div class="form-group">
+    <label for="imbuhan_mvp">IMBUHAN MVP:</label>
+    <input type="text" class="form-control" name="imbuhan_mvp" id="imbuhan_mvp">
+ </div>
+
+  
+ <button type="button" onclick="kira()" class="btn btn-info">Kira</button> 
+  
+  
+<div class="form-group">
+    <label for="jum_gaji_bersih">JUM GAJI BERSIH:</label>
+    <input type="number" class="form-control" name="jum_gaji_bersih" id="jum_gaji_bersih">
+  </div>
+
+ 
+<button  name="SUBMIT" type="SUBMIT" class="btn btn-default">SUBMIT</button>
+</form>
+</body>
+</html>
+

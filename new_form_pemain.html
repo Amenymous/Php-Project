@@ -1,0 +1,67 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>PEMAIN</title>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body body style="background: url('images/gambar4.jpg');background-repeat:no-repeat;background-size: 100% ;">
+
+<div style="margin-left:25%">
+
+<div class="w3-container w3-teal">
+  <h1>SILA MASUKKAN MAKLUMAT</h1>
+</div>
+
+<div class="w3-container">
+
+<h1>PEMAIN BARU</h1>
+
+</div>
+
+</div>
+
+<div class="container">
+<form action="input_process_pemain.php" method="post" enctype="multipart/form-data" name="form1">
+    
+	<div class="form-group">
+    <label for="id_pemain">ID PEMAIN:</label>
+    <input type="text" class="form-control" name="id_pemain" id="id_pemain">
+  </div>
+  
+  <div class="form-group">
+    <label for="nama_pemain">NAMA PEMAIN:</label>
+    <input type="text" class="form-control" name="nama_pemain" id="nama_pemain">
+  </div>
+<div class="form-group">
+    <label for="umur">UMUR:</label>
+    <input type="number" class="form-control" name="umur" id="umur">
+  </div>
+    
+  <div class="form-group">
+  <label for="no_jersi">NO JERSI:</label>
+  <input class="form-control" name ="no_jersi" id="no_jersi">
+  </div>
+
+<div class="form-group">
+    <label for="posisi">POSISI:</label>
+    <input type="text" class="form-control" name="posisi" id="posisi" >
+  </div>
+
+
+<div class="form-group">
+    <label for="gred_pemain">GRED PEMAIN:</label>
+    <input type="text" class="form-control" name="gred_pemain" id="gred_pemain" >
+  </div>
+
+
+<button  name="SUBMIT" type="SUBMIT" class="btn btn-default">SUBMIT</button>
+
+</form>
+</body>
+</html>
+
